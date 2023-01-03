@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ ttps://www.springframework.org/schema/context
+ ttps://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ <!-- <context:annotation-config /> to enable annotation -->
+ 
+<bean class="com.spring.beanLifeCycle.empl" name="emp"  init-method="init" destroy-method="destroy">
+   <property name="empID" value="12" />
+</bean>
+
+<bean class="com.spring.beanLifeCycle.UsingInterfaceExample" name="pepsi1" >
+   <property name="pepsiPrice" value="50"/>
+
+</bean>
+
+
+
+
+ </beans>
+
+

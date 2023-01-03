@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ ttps://www.springframework.org/schema/context
+ ttps://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ <bean class="com.spring.auto.wire.Address" name="address">
+ <property name="street" value="no1 "/>
+ <property name="city" value="Delhi "/>
+  
+ 
+ </bean>
+ <!-- autowire name and bean name should be same for byname autowire for example name of Address bean is same as the variable name for the require for object class in EMP -->
+ 
+ <!-- <bean class="com.spring.auto.wire.Emp" name="emp1"  autowire="byName"> -->
+  
+  <!-- <bean class="com.spring.auto.wire.Emp" name="emp1"  autowire="byType"> byType search as by type for example it search for address type object -->
+  
+  
+  <!-- It search like by name but call constrcutor to set the value -->
+   <bean class="com.spring.auto.wire.Emp" name="emp1"  autowire="constructor">
+  </bean>
+ 
+ </beans>
+

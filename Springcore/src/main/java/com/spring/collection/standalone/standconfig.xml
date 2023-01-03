@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+ 
+	
+	<util:list list-class="java.util.LinkedList" id="bestFriends"> 
+		<value>Rithik</value>
+		<value>Adarsh</value>
+		<value>Umang</value>
+	</util:list>
+	<util:map map-class="java.util.HashMap" id="coursesdetails">
+	   <entry key="Java" value=" 8000" />
+	   <entry key="Python" value=" 8000" />
+	   <entry key="JavaScript" value=" 8000" />
+	</util:map>
+
+	<bean class="com.spring.collection.standalone.Person" name="person1">
+	  <property name="friends">
+	    <ref bean="bestFriends"/>
+	  </property>
+	  
+	  <property name="courses" ref="coursesdetails"/>
+	  
+ </bean>
+  
+     
+   
+
+       
+ </beans>
+

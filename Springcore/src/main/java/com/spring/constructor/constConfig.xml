@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ ttps://www.springframework.org/schema/context
+ ttps://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ <bean class="com.spring.constructor.Certi" name="cer">
+   <constructor-arg  value="Yadav"/>
+ </bean>
+ 
+ <bean class="com.spring.constructor.Person" name="Person1">
+ <constructor-arg value="Tushar"/>
+  <constructor-arg value="12" type="int" />
+   <constructor-arg ref="cer"/>
+   <constructor-arg>
+     <list>
+        <value>101</value>
+          <value>101</value>
+     </list> 
+   </constructor-arg>
+ 
+ 
+ 
+ </bean>
+ 
+ 
+ </beans>
+
